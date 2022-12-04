@@ -1,9 +1,12 @@
 import React from 'react'
+import { Button } from './EscenaStyled'
 
-const Escena = ({sentences}) => {
+const Escena = ({ sentences }) => {
   return (
     <div>
-      {sentences.map(sentence => <p>{sentence}</p>)}
+      { sentences.map(sentence =>
+        <Button>{sentence}</Button>
+      ) }
     </div>
   )
 }
