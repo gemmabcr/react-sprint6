@@ -1,21 +1,7 @@
 import React from 'react'
 import { ButtonGroup, Sentence } from './EscenaStyled'
 
-const Escena = ({ sentences }) => {
-  const [isSelected, setIsSelected] = React.useState(0);
-
-  function previousSentence() {
-    setIsSelected(prevState =>
-      prevState = (isSelected > 0) ? --prevState : sentences.length - 1
-    );
-  }
-
-  function nextSentence() {
-    setIsSelected(prevState =>
-      prevState = (isSelected < sentences.length-1) ? ++prevState : 0
-    );
-  }
-
+const Escena = ({ sentences, isSelected, previousSentence, nextSentence }) => {
   return (
     <div>
       <ButtonGroup>
